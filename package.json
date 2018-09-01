@@ -1,0 +1,33 @@
+{
+  "name": "es-lib-example",
+  "version": "0.1.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "format": "prettier --write --list-different '*.config.js' 'src/**/*.{js,jsx,ts,tsx}'",
+    "build": "rollup -c"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "prettier": "^1.0.0",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^4.0.0",
+    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@babel/runtime-corejs2": "^7.0.0"
+  }
+}
