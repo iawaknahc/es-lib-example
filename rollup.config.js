@@ -1,4 +1,5 @@
-import babel from "rollup-plugin-babel";
+import * as ts from "typescript";
+import typescript from "rollup-plugin-typescript";
 import commonjs from "rollup-plugin-commonjs";
 import json from "rollup-plugin-json";
 import resolve from "rollup-plugin-node-resolve";
@@ -21,9 +22,8 @@ const plugins = [
   commonjs({
     include: "node_modules/**",
   }),
-  babel({
-    extensions,
-    runtimeHelpers: true,
+  typescript({
+    typescript: ts,
   }),
 ];
 
@@ -41,6 +41,9 @@ const output = [
 ];
 
 function external(id) {
+  if (id === "tslib") {
+    return false;
+  }
   for (const d of allDeps) {
     if (id.startsWith(d)) {
       return true;
