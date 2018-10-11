@@ -1,4 +1,3 @@
-import * as ts from "typescript";
 import typescript from "rollup-plugin-typescript";
 import commonjs from "rollup-plugin-commonjs";
 import json from "rollup-plugin-json";
@@ -22,9 +21,7 @@ const plugins = [
   commonjs({
     include: "node_modules/**",
   }),
-  typescript({
-    typescript: ts,
-  }),
+  typescript(),
 ];
 
 const output = [
