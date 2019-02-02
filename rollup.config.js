@@ -28,12 +28,10 @@ const output = [
   {
     format: "cjs",
     file: "dist/index.cjs.js",
-    interop: false,
   },
   {
     format: "esm",
     file: "dist/index.esm.js",
-    interop: false,
   },
 ];
 
