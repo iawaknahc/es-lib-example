@@ -5,7 +5,7 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "format": "prettier --write --list-different '*.config.js' 'src/**/*.{js,jsx,ts,tsx}'",
-    "build": "rollup -c",
+    "prepare": "rollup --config",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   },
@@ -13,21 +13,18 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/jest": "^23.0.0",
-    "jest": "^23.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/jest": "^24.0.0",
+    "jest": "^24.0.0",
     "prettier": "^1.0.0",
     "rollup": "^1.0.0",
+    "rollup-plugin-babel": "^4.0.0",
     "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-json": "^3.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "ts-jest": "^23.0.0",
     "typescript": "^3.0.0"
-  },
-  "dependencies": {
-    "tslib": "1.9.3"
-  },
-  "resolutions": {
-    "tslib": "1.9.3"
   }
 }
